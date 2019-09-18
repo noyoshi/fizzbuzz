@@ -9,6 +9,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run a multi-line script
       run: |
+        sudo apt-get install haskell-platform
         gcc -std=gnu99 fizzbuzz.c
         javac fizzbuzz.java
         ./a.out | diff fizzbuzz.txt -
