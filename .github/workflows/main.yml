@@ -19,3 +19,4 @@ jobs:
         go run fizzbuzz.go | diff fizzbuzz.txt -
         ruby fizzbuzz.rb | diff fizzbuzz.txt - 
         perl6 fizzbuzz.p6 | diff fizzbuzz.txt -
+        runhaskell fizzbuzz.hs | diff fizzbuzz.txt -
