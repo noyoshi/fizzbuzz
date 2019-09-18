@@ -9,10 +9,13 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run a multi-line script
       run: |
-        echo "sam is dummie"
         gcc -std=gnu99 fizzbuzz.c
+        javac fizzbuzz.java
         ./a.out | diff fizzbuzz.txt -
         python3 fizzbuzz.py | diff fizzbuzz.txt -
         node fizzbuzz.js | diff fizzbuzz.txt -
         bash fizzbuzz.sh | diff fizzbuzz.txt -
-
+        java fizzbuzz | diff fizzbuzz.txt -
+        go run fizzbuzz.go | diff fizzbuzz.txt -
+        ruby fizzbuzz.rb | diff fizzbuzz.txt - 
+        perl6 fizzbuzz.p6 | diff fizzbuzz.txt -
