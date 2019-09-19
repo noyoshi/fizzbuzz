@@ -9,7 +9,10 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run a multi-line script
       run: |
+        sudo apt-get update
         sudo apt-get install haskell-platform
+        sudo apt-get install perl6
+        sudo apt-get install ruby 
         gcc -std=gnu99 fizzbuzz.c
         javac fizzbuzz.java
         ./a.out | diff fizzbuzz.txt -
