@@ -13,6 +13,7 @@ jobs:
         sudo apt-get install haskell-platform
         sudo apt-get install perl6
         sudo apt-get install ruby
+        sudo apt-get install rustc
         gcc -std=gnu99 fizzbuzz.c
         javac fizzbuzz.java
         rustc fizzbuzz.rs -o fizzrust
