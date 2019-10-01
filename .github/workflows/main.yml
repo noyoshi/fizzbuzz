@@ -18,7 +18,6 @@ jobs:
         ./emojicodec fizzbuzz.emojic -o emojifizz
         gcc -std=gnu99 fizzbuzz.c -o cfizz 
         javac fizzbuzz.java
-        ./cfizz | diff fizzbuzz.txt -
         ./emojifizz | diff fizzbuzz.txt -
         python3 fizzbuzz.py | diff fizzbuzz.txt -
         node fizzbuzz.js | diff fizzbuzz.txt -
