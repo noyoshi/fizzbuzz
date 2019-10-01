@@ -12,15 +12,18 @@ jobs:
         sudo apt-get update
         sudo apt-get install haskell-platform
         sudo apt-get install perl6
-        sudo apt-get install ruby 
+        sudo apt-get install ruby
         gcc -std=gnu99 fizzbuzz.c
         javac fizzbuzz.java
+        rustc fizzbuzz.rs -o fizzrust
         ./a.out | diff fizzbuzz.txt -
+        ./fizzrust | diff fizzbuzz.txt -
         python3 fizzbuzz.py | diff fizzbuzz.txt -
         node fizzbuzz.js | diff fizzbuzz.txt -
         bash fizzbuzz.sh | diff fizzbuzz.txt -
         java fizzbuzz | diff fizzbuzz.txt -
         go run fizzbuzz.go | diff fizzbuzz.txt -
-        ruby fizzbuzz.rb | diff fizzbuzz.txt - 
+        ruby fizzbuzz.rb | diff fizzbuzz.txt -
         perl6 fizzbuzz.p6 | diff fizzbuzz.txt -
         runhaskell fizzbuzz.hs | diff fizzbuzz.txt -
+
