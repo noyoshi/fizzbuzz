@@ -13,18 +13,22 @@ jobs:
         sudo apt-get install haskell-platform
         sudo apt-get install perl6
         sudo apt-get install ruby
+        sudo apt-get install rustc
         wget https://github.com/emojicode/emojicode/releases/download/v1.0-beta.1/Emojicode-1.0-beta.1-Linux-x86_64.tar.gz -O emojicode.tar.gz
         tar -xzf emojicode.tar.gz --strip-components=1
         ./emojicodec fizzbuzz.emojic -o emojifizz
         gcc -std=gnu99 fizzbuzz.c
         javac fizzbuzz.java
+        rustc fizzbuzz.rs -o fizzrust
         ./a.out | diff fizzbuzz.txt -
+        ./fizzrust | diff fizzbuzz.txt -
         ./emojifizz | diff fizzbuzz.txt -
         python3 fizzbuzz.py | diff fizzbuzz.txt -
         node fizzbuzz.js | diff fizzbuzz.txt -
         bash fizzbuzz.sh | diff fizzbuzz.txt -
         java fizzbuzz | diff fizzbuzz.txt -
         go run fizzbuzz.go | diff fizzbuzz.txt -
-        ruby fizzbuzz.rb | diff fizzbuzz.txt - 
+        ruby fizzbuzz.rb | diff fizzbuzz.txt -
         perl6 fizzbuzz.p6 | diff fizzbuzz.txt -
         runhaskell fizzbuzz.hs | diff fizzbuzz.txt -
+
