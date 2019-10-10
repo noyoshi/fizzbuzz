@@ -1,0 +1,1 @@
+(for ([i (in-range 1 101)]) (if (and (equal? (modulo i 3) 0 ) (equal? (modulo i 5) 0 ) ) (printf "fizzbuzz\n") (if (equal? (modulo i 3) 0 )  (printf "fizz\n")  (if (equal? (modulo i 5) 0 )  (printf "buzz\n") (printf "~a\n" i) ) ))) 
