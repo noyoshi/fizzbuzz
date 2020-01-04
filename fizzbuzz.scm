@@ -1,0 +1,1 @@
+(define fizzbuzz (lambda (i) (cond ((eq? 101 i) (display ""))((eq? 0 (modulo i 15)) (display "fizzbuzz\n") (fizzbuzz (+ i 1)))((eq? 0 (modulo i 3)) (display "fizz\n") (fizzbuzz (+ i 1))) ((eq? 0 (modulo i 5)) (display "buzz\n") (fizzbuzz (+ i 1)))(else (display i) (display "\n")(fizzbuzz (+ i 1))))))(fizzbuzz 1)
